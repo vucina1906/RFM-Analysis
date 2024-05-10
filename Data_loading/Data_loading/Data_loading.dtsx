@@ -1,0 +1,1339 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/9/2024 8:50:38 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-1HD4628"
+  DTS:CreatorName="DESKTOP-1HD4628\Vuk"
+  DTS:DTSID="{52344021-F089-47C3-A274-2751B7F2458C}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Data_loading"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{F46E6CDC-0901-4206-9194-14D406F6E885}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Auto_Sales_data_csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C95FBFA5-B490-4047-BF2A-0984EEF5A01F}"
+      DTS:ObjectName="Auto_Sales_data_csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Vuk\Desktop\Projects\RFM Analysis\Auto_Sales_data.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ORDERNUMBER"
+              DTS:DTSID="{665AEC63-A12B-42EB-A5DE-646DBF0AF810}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QUANTITYORDERED"
+              DTS:DTSID="{77964566-45BA-449F-A96D-48E4FF22E064}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PRICEEACH"
+              DTS:DTSID="{1AEC4282-67A1-427E-A3F0-3AD562C864F6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ORDERLINENUMBER"
+              DTS:DTSID="{E87D7D1E-4D0F-431E-8CA3-EA5A78A62419}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SALES"
+              DTS:DTSID="{BD09B9EA-7516-4E51-A7B5-4D2187743C18}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ORDERDATE"
+              DTS:DTSID="{2573D260-8967-42FC-A0B9-730A7274CC85}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DAYS_SINCE_LASTORDER"
+              DTS:DTSID="{D4B6D9E2-3D1A-4A95-B3B3-0DCC8157F00D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="STATUS"
+              DTS:DTSID="{057946F2-1A0B-44C3-A3E9-F303B4A1BA7E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PRODUCTLINE"
+              DTS:DTSID="{04B92683-7383-4748-8555-F9965F8AD0C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MSRP"
+              DTS:DTSID="{35408333-D6C1-4904-8787-9BE4841CED17}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PRODUCTCODE"
+              DTS:DTSID="{7CB77966-D839-4740-869B-9141A0865787}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CUSTOMERNAME"
+              DTS:DTSID="{4E574B99-05F4-49CC-9FEA-FE79D80F02F9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PHONE"
+              DTS:DTSID="{C244B2BC-D9D1-425D-8384-4B9CB33AC7A5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ADDRESSLINE1"
+              DTS:DTSID="{ECED0AEF-41BC-43C5-BFC2-D3363177E103}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CITY"
+              DTS:DTSID="{9F20C69A-3B76-4985-A9C6-452BA1EA92C2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="POSTALCODE"
+              DTS:DTSID="{22D5BE37-90B6-4093-9891-3883A3F49B5C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COUNTRY"
+              DTS:DTSID="{7EC2906E-7377-41C4-8DD7-CB3F8CE3C5B3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CONTACTLASTNAME"
+              DTS:DTSID="{E14CFAB4-880F-4756-B487-68F417B8ACEB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CONTACTFIRSTNAME"
+              DTS:DTSID="{B93C1BCA-E5C1-49C0-B590-9128973A5D06}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DEALSIZE"
+              DTS:DTSID="{3F030DD0-74AD-4F7C-8D93-60201B2EA85D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-1HD4628\SQLEXPRESS.RFM]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5C0F5592-670A-44E0-B08B-B9240131EE9F}"
+      DTS:ObjectName="DESKTOP-1HD4628\SQLEXPRESS.RFM">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-1HD4628\SQLEXPRESS;Initial Catalog=RFM;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-Data_loading-{5C0F5592-670A-44E0-B08B-B9240131EE9F}DESKTOP-1HD4628\SQLEXPRESS.RFM;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Loading Auto_Sales_data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{229865B5-789E-4F0C-91B6-EA228D45D9AF}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Loading Auto_Sales_data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Loading Auto_Sales_data\Auto_Sales_data"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Auto_Sales_data"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Auto_Sales_data_csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[Auto_Sales_data_csv]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[ORDERNUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[ORDERNUMBER]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[ORDERNUMBER]"
+                      name="ORDERNUMBER"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[QUANTITYORDERED]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[QUANTITYORDERED]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[QUANTITYORDERED]"
+                      name="QUANTITYORDERED"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[PRICEEACH]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[PRICEEACH]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[PRICEEACH]"
+                      name="PRICEEACH"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[ORDERLINENUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[ORDERLINENUMBER]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[ORDERLINENUMBER]"
+                      name="ORDERLINENUMBER"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[SALES]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[SALES]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[SALES]"
+                      name="SALES"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[ORDERDATE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[ORDERDATE]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[ORDERDATE]"
+                      name="ORDERDATE"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[DAYS_SINCE_LASTORDER]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[DAYS_SINCE_LASTORDER]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[DAYS_SINCE_LASTORDER]"
+                      name="DAYS_SINCE_LASTORDER"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[STATUS]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[STATUS]"
+                      name="STATUS"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[PRODUCTLINE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[PRODUCTLINE]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[PRODUCTLINE]"
+                      name="PRODUCTLINE"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[MSRP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[MSRP]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[MSRP]"
+                      name="MSRP"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[PRODUCTCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[PRODUCTCODE]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[PRODUCTCODE]"
+                      name="PRODUCTCODE"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[CUSTOMERNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[CUSTOMERNAME]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[CUSTOMERNAME]"
+                      name="CUSTOMERNAME"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[PHONE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[PHONE]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[PHONE]"
+                      name="PHONE"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[ADDRESSLINE1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[ADDRESSLINE1]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[ADDRESSLINE1]"
+                      name="ADDRESSLINE1"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[CITY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[CITY]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[CITY]"
+                      name="CITY"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[POSTALCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[POSTALCODE]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[POSTALCODE]"
+                      name="POSTALCODE"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[COUNTRY]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[COUNTRY]"
+                      name="COUNTRY"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[CONTACTLASTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[CONTACTLASTNAME]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[CONTACTLASTNAME]"
+                      name="CONTACTLASTNAME"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[CONTACTFIRSTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[CONTACTFIRSTNAME]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[CONTACTFIRSTNAME]"
+                      name="CONTACTFIRSTNAME"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[DEALSIZE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[DEALSIZE]"
+                      length="50"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[DEALSIZE]"
+                      name="DEALSIZE"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[ORDERNUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ORDERNUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[QUANTITYORDERED]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="QUANTITYORDERED" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[PRICEEACH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PRICEEACH" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[ORDERLINENUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ORDERLINENUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[SALES]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SALES" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[ORDERDATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ORDERDATE" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[DAYS_SINCE_LASTORDER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DAYS_SINCE_LASTORDER" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="STATUS" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[PRODUCTLINE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PRODUCTLINE" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[MSRP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MSRP" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[PRODUCTCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PRODUCTCODE" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[CUSTOMERNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CUSTOMERNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[PHONE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PHONE" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[ADDRESSLINE1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ADDRESSLINE1" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[CITY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CITY" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[POSTALCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="POSTALCODE" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="COUNTRY" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[CONTACTLASTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CONTACTLASTNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[CONTACTFIRSTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CONTACTFIRSTNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].ExternalColumns[DEALSIZE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DEALSIZE" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Loading Auto_Sales_data\RFM Database"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="RFM Database"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Auto_Sales_data]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Loading Auto_Sales_data\RFM Database.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-1HD4628\SQLEXPRESS.RFM]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-1HD4628\SQLEXPRESS.RFM]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[ORDERNUMBER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ORDERNUMBER"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[ORDERNUMBER]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[ORDERNUMBER]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[QUANTITYORDERED]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="QUANTITYORDERED"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITYORDERED]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[QUANTITYORDERED]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[PRICEEACH]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PRICEEACH"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[PRICEEACH]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[PRICEEACH]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[ORDERLINENUMBER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ORDERLINENUMBER"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[ORDERLINENUMBER]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[ORDERLINENUMBER]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[SALES]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SALES"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[SALES]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[SALES]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[ORDERDATE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ORDERDATE"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[ORDERDATE]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[ORDERDATE]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[DAYS_SINCE_LASTORDER]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DAYS_SINCE_LASTORDER"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[DAYS_SINCE_LASTORDER]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[DAYS_SINCE_LASTORDER]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[STATUS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="STATUS"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[STATUS]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[STATUS]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[PRODUCTLINE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PRODUCTLINE"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCTLINE]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[PRODUCTLINE]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[MSRP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MSRP"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[MSRP]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[MSRP]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[PRODUCTCODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PRODUCTCODE"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCTCODE]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[PRODUCTCODE]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[CUSTOMERNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CUSTOMERNAME"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[CUSTOMERNAME]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[CUSTOMERNAME]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[PHONE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PHONE"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[PHONE]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[PHONE]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[ADDRESSLINE1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ADDRESSLINE1"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESSLINE1]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[ADDRESSLINE1]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[CITY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CITY"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[CITY]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[CITY]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[POSTALCODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="POSTALCODE"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[POSTALCODE]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[POSTALCODE]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[COUNTRY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="COUNTRY"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[COUNTRY]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[COUNTRY]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[CONTACTLASTNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CONTACTLASTNAME"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[CONTACTLASTNAME]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[CONTACTLASTNAME]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[CONTACTFIRSTNAME]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CONTACTFIRSTNAME"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[CONTACTFIRSTNAME]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[CONTACTFIRSTNAME]" />
+                    <inputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].Columns[DEALSIZE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DEALSIZE"
+                      externalMetadataColumnId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[DEALSIZE]"
+                      lineageId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output].Columns[DEALSIZE]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[ORDERNUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ORDERNUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[QUANTITYORDERED]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="QUANTITYORDERED" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[PRICEEACH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PRICEEACH" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[ORDERLINENUMBER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ORDERLINENUMBER" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[SALES]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SALES" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[ORDERDATE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ORDERDATE" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[DAYS_SINCE_LASTORDER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DAYS_SINCE_LASTORDER" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="STATUS" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCTLINE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PRODUCTLINE" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[MSRP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MSRP" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[PRODUCTCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PRODUCTCODE" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[CUSTOMERNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CUSTOMERNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[PHONE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PHONE" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[ADDRESSLINE1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ADDRESSLINE1" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[CITY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CITY" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[POSTALCODE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="POSTALCODE" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="COUNTRY" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[CONTACTLASTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CONTACTLASTNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[CONTACTFIRSTNAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CONTACTFIRSTNAME" />
+                    <externalMetadataColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input].ExternalColumns[DEALSIZE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DEALSIZE" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Loading Auto_Sales_data\RFM Database.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Loading Auto_Sales_data\RFM Database.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Loading Auto_Sales_data\RFM Database.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Loading Auto_Sales_data\RFM Database.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Loading Auto_Sales_data.Paths[Flat File Source Output]"
+              endId="Package\Loading Auto_Sales_data\RFM Database.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Loading Auto_Sales_data\Auto_Sales_data.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="205,42"
+          Id="Package\Loading Auto_Sales_data"
+          TopLeft="226,79" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Loading Auto_Sales_data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Loading Auto_Sales_data\Auto_Sales_data"
+          TopLeft="190,38" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Loading Auto_Sales_data\RFM Database"
+          TopLeft="202,201" />
+        <EdgeLayout
+          Id="Package\Loading Auto_Sales_data.Paths[Flat File Source Output]"
+          TopLeft="275,80">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,121"
+              Start="0,0"
+              End="0,113.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,113.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Loading Auto_Sales_data\RFM Database">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
